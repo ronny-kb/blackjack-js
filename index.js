@@ -32,6 +32,8 @@ const ui = {
     betEl: document.getElementById("bet-el"),
     increaseBetBtn: document.getElementById("increase-bet-btn"),
     decreaseBetBtn: document.getElementById("decrease-bet-btn"),
+    increaseBet50Btn: document.getElementById("increase-bet-50-btn"),
+    decreaseBet50Btn: document.getElementById("decrease-bet-50-btn"),
     // Action Buttons
     startGameBtn: document.getElementById("start-game-btn"),
     hitBtn: document.getElementById("hit-btn"),
@@ -55,6 +57,21 @@ function increaseBet() {
 function decreaseBet() {
     if (state.bet >= 5) {
         state.bet -= 5;
+        updateBetDisplay();
+    }
+}
+
+function increaseBet50() {
+    if (player.chips >= state.bet + 50) {
+        state.bet += 50;
+        updateBetDisplay();
+    }
+}
+
+// Decrease bet by 50
+function decreaseBet50() {
+    if (state.bet >= 50) {
+        state.bet -= 50;
         updateBetDisplay();
     }
 }
@@ -106,6 +123,7 @@ function renderGame() {
             state.hasBlackJack = true;
         } else if (state.playerSum === 21) {
             state.message = "You've got 21! Stand to see dealer."; // auto stand?
+            state.hasBlackJack = true;
         } else {
             state.message = "You busted! Lost: $" + state.bet;
             state.continueGame = false;
@@ -126,6 +144,11 @@ function renderGame() {
     ui.startGameBtn.disabled = state.continueGame;
     ui.increaseBetBtn.disabled = state.continueGame;
     ui.decreaseBetBtn.disabled = state.continueGame;
+    ui.increaseBet50Btn.disabled = state.continueGame;
+    ui.decreaseBet50Btn.disabled = state.continueGame;
+
+    ui.hitBtn.disabled = !(state.continueGame && !state.hasBlackJack);
+    ui.standBtn.disabled = !state.continueGame;
 
     // Update UI elements with the final state
     ui.messageEl.textContent = state.message;
@@ -313,6 +336,8 @@ function init() {
     ui.submitNameBtn.addEventListener("click", handleNameSubmit);
     ui.increaseBetBtn.addEventListener("click", increaseBet);
     ui.decreaseBetBtn.addEventListener("click", decreaseBet);
+    ui.increaseBet50Btn.addEventListener("click", increaseBet50);
+    ui.decreaseBet50Btn.addEventListener("click", decreaseBet50);
     ui.startGameBtn.addEventListener("click", startGame);
     ui.hitBtn.addEventListener("click", newCard);
     ui.standBtn.addEventListener("click", stand);
