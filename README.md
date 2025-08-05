@@ -8,9 +8,10 @@ A simple Blackjack game I built using plain JavaScript, HTML, and CSS. The game 
 
 ## Features
 
-- One vs one Blackjack vs. the dealer
+- One vs one Blackjack against the dealer
 - Adjustable betting before each round
 - Hit and Stand actions
+- Smart hand summing
 - Payouts include 1:1 and 3:2 for a natural Blackjack
 - Real-time UI updates and chip count tracking
 - Works on desktop and mobile
