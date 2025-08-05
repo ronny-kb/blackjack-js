@@ -51,7 +51,7 @@ This project uses the excellent **Cardmeister** library to render the playing ca
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/ronny-kb/blackjack-js.git](https://github.com/ronny-kb/blackjack-js.git)
+    git clone https://github.com/ronny-kb/blackjack-js.git](https://github.com/ronny-kb/blackjack-js.git
     ```
 2.  Navigate to the project directory:
     ```bash
