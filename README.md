@@ -25,9 +25,9 @@ I kept things simple and focused on core frontend skills like DOM manipulation, 
 
 ## Cardmeister `<playing-card>`
 
-This project uses the **Cardmeister** library to render the playing cards. The lightweight JavaScript file that defines a `<playing-card>` web component.  It contains all 52 card SVGs embedded within it, creating them on the fly without needing to load 52 separate image files.
+This project uses the amazing **Cardmeister** library to render the playing cards. The lightweight JavaScript file defines a `<playing-card>` web component.  It contains all 52 card SVGs, creating them on the fly without needing to load or store separate image files.
 
-**Repository:** [https://github.com/cardmeister/cardmeister.github.io](https://github.com/cardmeister/cardmeister.github.io)
+**Repository:** [github.com/cardmeister/cardmeister.github.io](https://github.com/cardmeister/cardmeister.github.io)
 
 ---
 
