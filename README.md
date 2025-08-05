@@ -21,7 +21,7 @@ Blackjack built with Vanilla JavaScript, HTML, and CSS. This project focuses on 
 
 * **HTML5:** For the core structure and content.
 * **CSS3:** For modern styling, including Flexbox for layout, custom properties, and a frosted-glass modal effect with `backdrop-filter`.
-* **Vanilla JavaScript (ES6):** For all game logic, state management, DOM manipulation, and event handling. No frameworks or libraries were used for the core application logic.
+* **Vanilla JavaScript:** For all game logic, state management, DOM manipulation, and event handling. No frameworks or libraries were used for the core application logic.
 
 ---
 
