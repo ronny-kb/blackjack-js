@@ -5,6 +5,7 @@ body {
     text-align: center;
     color: white;
     font-weight: bold;
+    touch-action: manipulation; /* Prevent accidental double tap zoom */
 }
 
 h1 {
@@ -127,12 +128,18 @@ playing-card {
 
     h1 {
         font-size: 2.5em;
+        margin-bottom: 0.2em;
     }
+
+    h2 {
+        margin-top: 0.5em;
+        margin-bottom: 0.1em;
+    }
+
 
     playing-card {
         width: 6rem;
-        height: 8.4rem;
-        color: #000000;
+        height: 8.375rem;
     }
 
     .card-container {
@@ -142,16 +149,16 @@ playing-card {
 
     button {
         width: 90%;
-        max-width: 18.75rem;
-        padding: 0.8rem;
-        font-size: 1.2em;
+        max-width: 12.5rem;
+        padding: 0.6rem;
+        font-size: 1.1em;
         margin-bottom: 0.5rem;
     }
 
     .bet-btn {
         width: 5rem;
         font-size: 1.2em;
-        padding: 0.5em;
+        padding: 0.3em;
     }
 
     .modal-content {
